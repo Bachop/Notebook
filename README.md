@@ -3,6 +3,7 @@
 ***[@Bachop](https://github.com/Bachop)***
 
 一个什么都可能会写的笔记本。整理一下，主要是为了防止某天失忆不能继续打工。
+![GitHub](./Pics4Markdown/haha.jpg)
 
 ---
 
@@ -12,4 +13,4 @@
 
 ---
 
-假装这是一张扉页。
+目前可以公开的情报。
