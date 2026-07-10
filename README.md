@@ -1,0 +1,15 @@
+# Notebook 笔记本
+
+***[@Bachop](https://github.com/Bachop)***
+
+一个什么都可能会写的笔记本。整理一下，主要是为了防止某天失忆不能继续打工。
+
+---
+
+## Timeline 时间线
+***10th July 2026***
+[Git Workflow for Embedded 针对嵌入式工程的 Git 工作流](./Git%20Workflow.md)
+
+---
+
+假装这是一张扉页。
