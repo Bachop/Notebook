@@ -93,7 +93,7 @@ Welcome to GitLab, @yourname!
 **Git LFS (Large File Storage)** 使用指针文件替代仓库中的大文件本体，当进行`clone`或`pull`时能够按版本需求下载，而非下载所有版本的大文件。
 #### 1.3.1 Git LFS 安装
 1. 前往[Git LFS 官网](https://git-lfs.com/)下载安装包并安装，或在使用Git Setup 安装时勾选：
-![[√] Git LFS (Large File Storage)](./git-lfs.png)
+![[√] Git LFS (Large File Storage)](../Pics4Markdown/git-lfs.png)
 2. 验证安装
 ```cmd
 git lfs version
@@ -228,6 +228,12 @@ alias project_1="cd D:/MyProject/Project_1"
 
 # 保存并退出（编辑结束后，按ESC，然后输入以下命令）
 :wq
+
+# Git Bash期望由.bash_profile来加载.bashrc，因此需要创建这个文件
+echo 'if [ -f ~/.bashrc ]; then source ~/.bashrc; fi' > ~/.bash_profile
+
+# 否则会收到如下警告：
+WARNING: Found ~/.bashrc but no ~/.bash_profile, ~/.bash_login or ~/.profile.
 ```
 
 **上述操作在重启Git Bash窗口时生效**，后续就可以使用别名进入目标仓库了。
