@@ -31,7 +31,8 @@
       - [2.3.2.1 创建分支](#2321-创建分支)
       - [2.3.2.2 切换分支](#2322-切换分支)
       - [2.3.2.3 合并分支](#2323-合并分支)
-      - [2.3.2.4 删除分支](#2324-删除分支)
+      - [2.3.2.4 分支变基](#2324-分支变基)
+      - [2.3.2.5 删除分支](#2325-删除分支)
     - [2.3.3 标签Tags](#233-标签tags)
   - [2.4 Git 工作流](#24-git-工作流)
 
@@ -297,10 +298,10 @@ git commit -m "feat: message"
 
 ##### 2.3.1.2 移除文件
 ```Git Bash
-# 删除工作区文件
-rm -rf directory/file.file_extension
-# 删除暂存区文件
+# 取消git追踪，并删除本地文件
 git rm directory/file.file_extension
+# 取消git追踪，但保留本地文件
+git rm --cached directory/file.file_extension
 ```
 
 ##### 2.3.1.3 撤销修改（只针对本地仓库）
@@ -348,7 +349,21 @@ git merge branch_name_2
 git add file.file_extension
 git commit -m "Merge: message"
 ```
-##### 2.3.2.4 删除分支
+
+##### 2.3.2.4 分支变基
+在基于某分支创建的子分支开发时，如果父分支更新了提交，而子分支的开发需要基于最新改动进行，此时可以将父分支合并进子分支中：
+D
+
+也可以将子分支变基到新的父分支上。
+分支变基操作可以获得**干净的线性提交历史**，**代价是重写所有被挪动提交的哈希值**。
+:warning:**多人同时协作开发时慎用**:warning:
+```Git Bash
+# 切换到待变基分支
+git checkout son_branch
+
+git rebase father_branch
+```
+##### 2.3.2.5 删除分支
 ```Git Bash
 # 删除分支（强制删除使用 -D ，删除远程分支不适用此项）
 git branch -d branch_name
